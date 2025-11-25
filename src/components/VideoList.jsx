@@ -4,11 +4,11 @@ import VideoItem from "./VideoItem"
 
 const VideoList = () => {
 
-    const {videos, deleteVideo} = useContext(AppContext)
+    const {videoList, deleteVideo} = useContext(AppContext)
 
     return (
         <div>
-            {videos.map((video) => <VideoItem key={video.id} id={video.id} videoLink={video.videoLink} isFinished={video.isFinished} handleDelete={deleteVideo} />)}
+            {videoList.map((video) => <VideoItem key={video.id} id={video.id} videoLink={video.videoLink} isFinished={video.isFinished} handleDelete={deleteVideo} />)}
         </div>
     )
 }

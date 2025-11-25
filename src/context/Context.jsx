@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-import supabase from "../../supabase";
+import supabase from "../supabase"
 
 export const AppContext = createContext()
 
@@ -38,8 +38,9 @@ export const AppContextProvider = ({ children }) => {
 
         setVideoList((prev) => [...prev, data])
 
-        console.log(data)
-        console.log(error)
+        if (error) {
+            console.log("Error al agregar el video: ", error)
+        }
 
     }
 
