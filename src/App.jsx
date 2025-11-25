@@ -1,5 +1,6 @@
 import supabase from "./supabase"
 import { useEffect, useState } from "react"
+import { AppContextProvider } from "./context/Context"
 
 function App() {
 
